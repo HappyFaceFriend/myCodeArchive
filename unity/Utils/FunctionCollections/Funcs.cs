@@ -6,14 +6,6 @@ using UnityEngine.UI;
 
 public static class Funcs
 {
-    public static bool IsKorean()
-    {
-        SystemLanguage lang = Application.systemLanguage;
-        if(lang == SystemLanguage.Korean)
-            return true;
-        else
-            return false;
-    }
     public static IEnumerator Shake(Transform t, float magnitude, float duration)
     {
         float eTime = 0f;
@@ -44,18 +36,6 @@ public static class Funcs
             yield return null;
         }
         t.localPosition = originalPos;
-    }
-    public static Vector2 Vec3to2(Vector3 v)
-    {
-        return new Vector2(v.x, v.y);
-    }
-    public static Vector3 Vec2to3(Vector2 v, float z = 0)
-    {
-        return new Vector3(v.x, v.y, z);
-    }
-    public static Vector2 GetMousePos()
-    {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     public static bool IsPointerOverGameObject()
     {
